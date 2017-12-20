@@ -6,9 +6,11 @@
 package libros.entity;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -71,10 +73,89 @@ public class Book implements Serializable {
     private Integer stock;
     @ManyToOne
     private Gender genero;
+    
+    
+    @ManyToMany(mappedBy="ejemplares")
+     private Collection<Purchase> purchases;
+  
+    
 
 
      public String getIsbn() {
         return isbn;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Date getFechaPublicacion() {
+        return fechaPublicacion;
+    }
+
+    public void setFechaPublicacion(Date fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
+    }
+
+    public Float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Float precio) {
+        this.precio = precio;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+
+    public Gender getGenero() {
+        return genero;
+    }
+
+    public void setGenero(Gender genero) {
+        this.genero = genero;
+    }
+    
+    public Collection<Purchase> getPurchases() {
+        return purchases;
+    }
+      
+    
+    public void setPurchases(Collection<Purchase> purchases) {
+        this.purchases = purchases;
     }
 
     public void setisbn(String isbn) {

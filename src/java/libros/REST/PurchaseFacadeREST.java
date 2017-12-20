@@ -80,7 +80,7 @@ public class PurchaseFacadeREST  {
         }
     }
   
-    /*
+    
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -104,7 +104,7 @@ public class PurchaseFacadeREST  {
         }
         return p;
     }
-*/
+
 
 
 
