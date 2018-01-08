@@ -101,6 +101,7 @@ public class BookFacadeREST{
     }
     
     
+    /*
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Collection<Book> findIsbn(@QueryParam ("isbn")String isbn){
@@ -162,5 +163,6 @@ public class BookFacadeREST{
          }
          return discos;
     }
+*/
     
 }
