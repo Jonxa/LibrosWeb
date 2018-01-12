@@ -22,7 +22,7 @@ import javax.persistence.Table;
  * @author Discos S.L Corporation
  */
 @Entity
-@Table(name="Admins",schema="LibrosSL")
+@Table(name="Admin",schema="LibrosSL")
 @NamedQuery(
         name="findByCredential",
         query="select s from Admin s where s.admin=:admin and s.password=:password"

@@ -99,8 +99,9 @@ public class PurchaseFacadeREST  {
     }
    
     @GET
+    @Path("usuario/{usuario}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Purchase> findAll(@QueryParam("usuario") String usuario){
+    public List<Purchase> findAll(@PathParam("usuario") String usuario){
         logger.info("Finding user purchases");
         List <Purchase> p = null;
         try {
