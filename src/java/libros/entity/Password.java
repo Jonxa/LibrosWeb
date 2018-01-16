@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Discos S.L Corporation
  */
 @Entity
-@Table(name="Passwords",schema="LibrosSL")
+@Table(name="Password",schema="LibrosSL")
 @NamedQueries({
     
     @NamedQuery(

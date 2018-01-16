@@ -55,9 +55,7 @@ import javax.xml.bind.annotation.XmlRootElement;
         query="select s from Book s where s.autor=:autor"
     )
 })
-
 @XmlRootElement
-
 public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -73,15 +71,11 @@ public class Book implements Serializable {
     private Integer stock;
     @ManyToOne
     private Gender genero;
-    
-    
-    @ManyToMany(mappedBy="ejemplares")
-     private Collection<Purchase> purchases;
-  
-    
+    //bucle relacional
+    @ManyToMany(mappedBy="books")
+    private Collection<Purchase> purchases;
 
-
-     public String getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
@@ -148,7 +142,7 @@ public class Book implements Serializable {
     public void setGenero(Gender genero) {
         this.genero = genero;
     }
-    
+   /*
     public Collection<Purchase> getPurchases() {
         return purchases;
     }
@@ -157,6 +151,7 @@ public class Book implements Serializable {
     public void setPurchases(Collection<Purchase> purchases) {
         this.purchases = purchases;
     }
+*/
 
     public void setisbn(String isbn) {
         this.isbn = isbn;
