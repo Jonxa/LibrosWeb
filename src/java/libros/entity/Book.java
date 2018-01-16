@@ -72,8 +72,8 @@ public class Book implements Serializable {
     @ManyToOne
     private Gender genero;
     //bucle relacional
-    @ManyToMany(mappedBy="books")
-    private Collection<Purchase> purchases;
+   // @ManyToMany(mappedBy="books")
+  //  private Collection<Purchase> purchases;
 
     public String getIsbn() {
         return isbn;
@@ -142,7 +142,8 @@ public class Book implements Serializable {
     public void setGenero(Gender genero) {
         this.genero = genero;
     }
-   /*
+   
+    /*
     public Collection<Purchase> getPurchases() {
         return purchases;
     }
