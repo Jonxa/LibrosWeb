@@ -14,9 +14,11 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Past;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
    *Entity class to store our books.
@@ -71,9 +73,23 @@ public class Book implements Serializable {
     private Integer stock;
     @ManyToOne
     private Gender genero;
-    //bucle relacional
-   // @ManyToMany(mappedBy="books")
-  //  private Collection<Purchase> purchases;
+ 
+    /*
+    @OneToMany(mappedBy="book")
+    @XmlTransient
+     private Collection<Ejemplar> ejemplares;
+
+    
+    
+    
+    public Collection<Ejemplar> getEjemplares() {
+        return ejemplares;
+    }
+
+    public void setEjemplares(Collection<Ejemplar> ejemplares) {
+        this.ejemplares = ejemplares;
+    }
+    */
 
     public String getIsbn() {
         return isbn;
